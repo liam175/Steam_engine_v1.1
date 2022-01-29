@@ -270,7 +270,7 @@ public class data {
     public void run(window w, data d, JTextField txtArea) {
         do {
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -398,6 +398,9 @@ public class data {
                                         den += Integer.parseInt(newData[i + g]);
                                     }
                                 }
+                            }
+                            if(numSplt1.length==1){
+                                den = 1;
                             }
                             //System.out.println(den + " " + num);
                         } catch (NullPointerException e) {

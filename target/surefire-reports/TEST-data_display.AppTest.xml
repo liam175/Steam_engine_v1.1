@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="data_display.AppTest" time="0.021" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="data_display.AppTest" time="0.017" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\lostl\Desktop\blek\target\test-classes;C:\Users\lostl\Desktop\blek\target\classes;C:\Users\lostl\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\lostl\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lostl\.m2\repository\com\github\sarxos\webcam-capture\0.3.12\webcam-capture-0.3.12.jar;C:\Users\lostl\.m2\repository\com\nativelibs4java\bridj\0.7.0\bridj-0.7.0.jar;C:\Users\lostl\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Users\lostl\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\lostl\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\lostl\.m2\repository\com\google\zxing\core\3.3.0\core-3.3.0.jar;C:\Users\lostl\.m2\repository\com\google\zxing\javase\3.4.1\javase-3.4.1.jar;C:\Users\lostl\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\lostl\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;"/>
+    <property name="java.class.path" value="c:\Users\lostl\Desktop\blek\target\test-classes;c:\Users\lostl\Desktop\blek\target\classes;C:\Users\lostl\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\lostl\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lostl\.m2\repository\com\github\sarxos\webcam-capture\0.3.12\webcam-capture-0.3.12.jar;C:\Users\lostl\.m2\repository\com\nativelibs4java\bridj\0.7.0\bridj-0.7.0.jar;C:\Users\lostl\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Users\lostl\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\lostl\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\lostl\.m2\repository\com\google\zxing\core\3.3.0\core-3.3.0.jar;C:\Users\lostl\.m2\repository\com\google\zxing\javase\3.4.1\javase-3.4.1.jar;C:\Users\lostl\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\lostl\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;"/>
     <property name="java.vm.vendor" value="Eclipse Adoptium"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -17,9 +17,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\lostl\AppData\Local\Temp\surefire1674855439959004486\surefirebooter9150659368007519070.jar C:\Users\lostl\AppData\Local\Temp\surefire1674855439959004486 2022-01-25T20-47-45_886-jvmRun1 surefire831561404745801601tmp surefire_03828149005779729530tmp"/>
+    <property name="sun.java.command" value="C:\Users\lostl\AppData\Local\Temp\surefire11875229716509726960\surefirebooter3898125739681693804.jar C:\Users\lostl\AppData\Local\Temp\surefire11875229716509726960 2022-01-29T11-46-20_036-jvmRun1 surefire13693534356605321124tmp surefire_07608014583352552928tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\lostl\Desktop\blek\target\test-classes;C:\Users\lostl\Desktop\blek\target\classes;C:\Users\lostl\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\lostl\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lostl\.m2\repository\com\github\sarxos\webcam-capture\0.3.12\webcam-capture-0.3.12.jar;C:\Users\lostl\.m2\repository\com\nativelibs4java\bridj\0.7.0\bridj-0.7.0.jar;C:\Users\lostl\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Users\lostl\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\lostl\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\lostl\.m2\repository\com\google\zxing\core\3.3.0\core-3.3.0.jar;C:\Users\lostl\.m2\repository\com\google\zxing\javase\3.4.1\javase-3.4.1.jar;C:\Users\lostl\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\lostl\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;"/>
+    <property name="surefire.test.class.path" value="c:\Users\lostl\Desktop\blek\target\test-classes;c:\Users\lostl\Desktop\blek\target\classes;C:\Users\lostl\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\lostl\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\lostl\.m2\repository\com\github\sarxos\webcam-capture\0.3.12\webcam-capture-0.3.12.jar;C:\Users\lostl\.m2\repository\com\nativelibs4java\bridj\0.7.0\bridj-0.7.0.jar;C:\Users\lostl\.m2\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;C:\Users\lostl\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\lostl\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar;C:\Users\lostl\.m2\repository\com\google\zxing\core\3.3.0\core-3.3.0.jar;C:\Users\lostl\.m2\repository\com\google\zxing\javase\3.4.1\javase-3.4.1.jar;C:\Users\lostl\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\lostl\.m2\repository\com\github\jai-imageio\jai-imageio-core\1.4.0\jai-imageio-core-1.4.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\lostl"/>
     <property name="user.language" value="en"/>
@@ -27,13 +27,13 @@
     <property name="java.version.date" value="2022-01-18"/>
     <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\lostl\Desktop\blek"/>
+    <property name="basedir" value="c:\Users\lostl\Desktop\blek"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\lostl\AppData\Local\Temp\surefire1674855439959004486\surefirebooter9150659368007519070.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\lostl\AppData\Local\Temp\surefire11875229716509726960\surefirebooter3898125739681693804.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.14+9"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
     <property name="java.io.tmpdir" value="C:\Users\lostl\AppData\Local\Temp\"/>
     <property name="java.version" value="11.0.14"/>
-    <property name="user.dir" value="C:\Users\lostl\Desktop\blek"/>
+    <property name="user.dir" value="c:\Users\lostl\Desktop\blek"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -60,5 +60,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="data_display.AppTest" time="0.001"/>
+  <testcase name="shouldAnswerWithTrue" classname="data_display.AppTest" time="0.002"/>
 </testsuite>
