@@ -8,13 +8,13 @@ import steam.engine.display.display_main;
  */
 public class App 
 {
-    display_main d = new display_main();
     public static void main( String[] args )
     {
         App a = new App();
         a.start();
     }
     public void start(){
+        display_main d = new display_main();
         d.init();
     }
 }

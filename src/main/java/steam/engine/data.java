@@ -45,7 +45,33 @@ public class data {
     public int rounds = 60;
     public String directory = getDir();
     public Boolean GraphMode = false;
+    public File appDataDir = null;
+    public void appDataExsists(){
+        String userdir =System.getProperty("user.home").replace("C:", "")+"/.SteamEngineData";
+        File dataa = new File(userdir.replace("\\", "/"));
+        appDataDir = dataa;
+        if(dataa.exists()){
+        }else{
+            try{
+                dataa.mkdir();
+                File a = new File(userdir.replace("\\", "/")+"/saved_data.json");
+                File b = new File(userdir.replace("\\", "/")+"/layout_presets.json");
+                a.createNewFile();
+                b.createNewFile();
+                FileWriter aa = new FileWriter(a);
+                FileWriter bb = new FileWriter(b);
+            aa.write("{\"input\":\"\",\"directory\":\"\",\"calcs\":[[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]]}");
+            aa.flush();
+            aa.close();
+            bb.write("[{\"a1\":0,\"a2\":0,\"a3\":20,\"a4\":0,\"a0\":20},{\"a1\":0,\"a2\":0,\"a3\":20,\"a4\":0,\"a0\":20},{\"a1\":0,\"a2\":0,\"a3\":20,\"a4\":0,\"a0\":20},{\"a1\":0,\"a2\":0,\"a3\":20,\"a4\":0,\"a0\":20}]");
+            bb.flush();
+            bb.close();
+            }catch(IOException e){
+                e.printStackTrace();
+            }
+        }
 
+    }
     public Object[] getDataTable(int team) {
         Object out[] = {};
         JSONParser parser = new JSONParser();
@@ -84,8 +110,7 @@ public class data {
         int out[] = new int[5];
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/layout_presets.json";
+            String path = appDataDir+"/layout_presets.json";
             path = path.replace('\\', '/');
             JSONArray s = (JSONArray) parser.parse(new FileReader(path));
             JSONObject obj = (JSONObject) s.get(type);
@@ -155,8 +180,8 @@ public class data {
     public void saveDir() {
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path =appDataDir
+                    + "/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             obj.remove("directory");
@@ -171,11 +196,12 @@ public class data {
     }
 
     String getDir() {
+        appDataExsists();
         String out = null;
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path = appDataDir
+                    + "/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             out = obj.get("directory").toString();
@@ -202,8 +228,8 @@ public class data {
             arr.add(objs[j]);
         }
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/layout_presets.json";
+            String path = appDataDir
+                    + "/layout_presets.json";
             path = path.replace('\\', '/');
             FileWriter file = new FileWriter(path);
             file.write(arr.toJSONString());
@@ -214,8 +240,8 @@ public class data {
         }
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path =appDataDir
+                    + "/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             obj.remove("input");
@@ -233,11 +259,11 @@ public class data {
     }
 
     public String getInputLayoutTxt() {
+        appDataExsists();
         String out = null;
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path =appDataDir+"/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             out = obj.get("input").toString();
@@ -248,11 +274,11 @@ public class data {
     }
 
     public String[] getInputList() {
+        appDataExsists();
         String out = null;
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path = appDataDir+"/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             out = obj.get("input").toString();
@@ -319,8 +345,7 @@ public class data {
         }
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path = appDataDir+"/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             obj.remove("calcs");
@@ -341,8 +366,7 @@ public class data {
                 { new JTextField(), new JTextField(), new JTextField() } };
         JSONParser parser = new JSONParser();
         try {
-            String path = new File(".").getCanonicalPath().toString().replace("C:", "")
-                    + "/src/main/java/steam/engine/saved_data.json";
+            String path = appDataDir+"/saved_data.json";
             path = path.replace('\\', '/');
             JSONObject obj = (JSONObject) parser.parse(new FileReader(path));
             JSONArray arr = (JSONArray) obj.get("calcs");

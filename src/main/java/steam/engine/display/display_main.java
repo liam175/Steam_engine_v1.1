@@ -39,17 +39,19 @@ public class display_main extends JFrame {
     JButton saveLayoutButton = new JButton("save layout");
     JTextField teams[] = { new JTextField(), new JTextField(), new JTextField(), new JTextField(), new JTextField(),
             new JTextField() };
-    data data = new data();
+    public data data = new data();
     JTextField ShownVar = new JTextField();
     JTextField inputLayout = new JTextField(data.getInputLayoutTxt());
     String intToKeys[] = data.getInputList();
     public Webcam webcam = null;
     String currentVar = "";
+    boolean edit = false;
 
     public void init() {
         setSize(1920, 1080);
         setLayout(null);
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("Team STEAMS SteamEngine v1");
         getContentPane().setBackground(c.steamRedTrue);
         dropMenu.addActionListener(new ActionListener() {
@@ -57,9 +59,9 @@ public class display_main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 movePane = dropMenu.getSelectedIndex();
-                if (!wins[movePane].isVisible() && editMode.isSelected()) {
+                if (wins[movePane].isVisible() && edit) {
                     wins[movePane].setVisible(true);
-                } else if (editMode.isSelected()) {
+                } else if (edit) {
                     wins[movePane].setVisible(false);
                 }
             }
@@ -170,6 +172,16 @@ public class display_main extends JFrame {
         editMode.setBounds(100, 0, 60, 20);
         editMode.setForeground(c.steamGold);
         editMode.setBackground(c.steamRedTrue);
+        editMode.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // TODO Auto-generated method stub
+                edit = editMode.isSelected();
+                System.out.println(edit);
+            }
+            
+        });
         
         add(ShownVar);
         ShownVar.setBounds(985, 0, 60, 20);
